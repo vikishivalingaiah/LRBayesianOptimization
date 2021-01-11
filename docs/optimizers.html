@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>optimizers API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>optimizers</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import numpy as np
+from scipy.stats import norm
+from scipy.optimize import minimize
+import matplotlib.pyplot as plt
+import logging
+
+
+class BayesianOptimizer:
+    def __init__(self, bounds, c_lambda, gpr, lambda_0=None, c_lambda_0=None, num_function_evaluations=2, xi=0.01,
+                 plotutil=None):
+        &#34;&#34;&#34;
+        Bayesian oprimizer implementing bayesian optimization with gaussian process regressor for one dimensional input
+        functions
+        Args:
+            bounds (ndarray, required): bound values for optimization of lambda
+            c_lambda (function, required): Objective function
+            gpr (GaussianRegressor, required): gaussian process regressor
+             lambda_0 (ndarray, optional): inputs evaluated by c_lambda,
+                                default None
+            c_lambda_0 (ndarray, optional): observed function evaluations,default None
+            num_function_evaluations (long, optional): Number of times to evaluated the function c_lambda, default 2
+
+            xi (float, optional): Exploitation vs Exploration parameters, default 0.01
+            plotutil (PlotUtil, optional): plotutil object to plot the results, default None
+
+        Attributes:
+            bounds (ndarray, required): bound values for optimization of lambda
+            c_lambda (function, required): Objective function
+            gpr (GaussianRegressor, required): gaussian process regressor
+            lambda_0 (ndarray, optional): inputs evaluated by c_lambda
+            c_lambda_0 (ndarray, optional): observed function evaluations,default None
+            num_function_evaluations (long, optional): Number of times to evaluated the function c_lambda
+            xi (float, optional): Exploitation vs Exploration parameters
+            plotutil (PlotUtil, optional): plotutil object to plot the results
+        &#34;&#34;&#34;
+        self.lambda_0 = lambda_0
+        self.c_lambda_0 = c_lambda_0
+        self.gpr = gpr
+        self.c_lambda = c_lambda
+        self.num_function_evaluations = num_function_evaluations
+        self.bounds = bounds
+        self.xi = xi
+        self.x_star = np.arange(bounds[:, 0], bounds[:, 1], 0.01).reshape(-1, 1)
+        self.num_sample_curves = 3
+        self.plotutil = plotutil
+
+    def expected_improvement(self, x_star):
+        &#34;&#34;&#34;
+        Activation function for bayseian optimization expected improvement
+        Args:
+            x_star (ndarray, optional): input samples
+
+        Returns:
+            u_lambda (ndarray): Activation output
+
+        &#34;&#34;&#34;
+
+        mu_lambda, cov_lambda, samples = self.gpr.predict(self.lambda_0, self.num_sample_curves)
+        ci_best = np.min(mu_lambda)
+
+        mu_lambda_hat, cov_lambda_hat, samples_hat = self.gpr.predict(x_star, self.num_sample_curves)
+
+        std = np.sqrt(np.diag(cov_lambda_hat)).reshape(-1, 1)
+
+        Z = (ci_best - mu_lambda_hat - self.xi) / std
+        Z_cdf = norm.cdf(Z)
+
+        u_lambda = std * Z * Z_cdf + std * norm.pdf(Z)
+        u_lambda[std == 0.0] = 0.0
+
+        return u_lambda
+
+    def find_lambda_byEI(self):
+        &#34;&#34;&#34;
+        Find the best possible lambda give EI activation function
+        Args:
+            None
+        Returns:
+            None
+
+        &#34;&#34;&#34;
+
+        dim = self.lambda_0.shape[1]
+        min_val = 1
+        min_x = None
+
+        def min_obj(X):
+            # Minimization objective is the negative acquisition function
+            return -1 * self.expected_improvement(X.reshape(-1, dim))[0]
+
+        for x0 in np.random.uniform(self.bounds[:, 0], self.bounds[:, 1], size=(25, dim)):
+            res = minimize(min_obj, x0=x0, bounds=self.bounds, method=&#39;L-BFGS-B&#39;)
+
+            if res.fun &lt; min_val:
+                min_val = res.fun[0]
+                min_x = res.x
+                # print(min_x)
+        return min_x.reshape(-1, 1)
+
+    def optimize(self):
+        &#34;&#34;&#34;
+        Optimize the objective function
+        Args:
+            None
+        Returns:
+            lambda (ndarray): Array of found lambdas during optimization
+            c_lambda (ndarray): Array of best cost values for the objective function
+
+        &#34;&#34;&#34;
+        logging.info(&#34;generating initial values for bayesian optimization&#34;)
+        if self.lambda_0 is None or self.c_lambda_0 is None:
+            self.generate_initial_samples()
+        for i in range(self.num_function_evaluations):
+            logging.info(&#34;=&#34; * 20)
+            logging.info(&#34;Evaluation iteration: &#34; + str(i + 1))
+            self.gpr.fit(self.lambda_0, self.c_lambda_0)
+            self.gpr.optimize_l()
+            mu_lambda_1, sigma_lambda_1, samples_1 = self.gpr.predict(self.x_star, self.num_sample_curves)
+            next_lambda = self.find_lambda_byEI()
+            Y_new = self.c_lambda(next_lambda)  # train_resnet(lr=next_lambda[0][0])
+            if i % 4 == 0:
+                plt.figure()
+                plt.rc(&#39;font&#39;, size=8)
+                plt.rc(&#39;legend&#39;, fontsize=8)
+            logging.info(&#34;Lambda :&#34; + str(next_lambda) + &#34;C_lambda :&#34; + str(Y_new))
+            plt.subplot(4, 2, 2 * (i % 4) + 1)
+            self.plotutil.plot_gp(mu_lambda_1, sigma_lambda_1, self.x_star, self.lambda_0, self.c_lambda_0, samples_1,
+                                  show_legend=i == 0, savefig=False)
+            plt.title(f&#39;Iteration {i + 1}&#39;)
+
+            plt.subplot(4, 2, 2 * (i % 4) + 2)
+            self.plotutil.plot_acquisition(self.x_star, self.expected_improvement(self.x_star), next_lambda,
+                                           show_legend=i == 0, savefig=False)
+
+            if self.plotutil is not None:
+                if (i + 1) % 4 == 0 or (i + 1) == self.num_function_evaluations:
+                    self.plotutil.pp.savefig()
+
+            self.lambda_0 = np.append(self.lambda_0, next_lambda)[np.newaxis][:].reshape(-1, 1)
+            self.c_lambda_0 = np.append(self.c_lambda_0, Y_new)[np.newaxis][:].reshape(-1, 1)
+
+        self.plotutil.plot_convergence(self.lambda_0, self.c_lambda_0, show_legend=True, savefig=False)
+        if self.plotutil is not None:
+            self.plotutil.pp.savefig()
+        logging.info(&#34;Optimization complete&#34;)
+        return self.lambda_0, self.c_lambda_0
+
+    def generate_initial_samples(self):
+        &#34;&#34;&#34;
+        Genereate the initial observation for starting bayesian optimization
+        Args:
+            None
+        Returns:
+            None
+        &#34;&#34;&#34;
+
+        lambda_0 = np.random.uniform(self.bounds[:, 0], self.bounds[:, 1])
+        lambda_0 = np.array([lambda_0]).reshape(-1, 1)
+        final_loss = self.c_lambda(lambda_0)
+        self.lambda_0 = lambda_0
+        self.c_lambda_0 = np.array([final_loss]).reshape(-1, 1)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="optimizers.BayesianOptimizer"><code class="flex name class">
+<span>class <span class="ident">BayesianOptimizer</span></span>
+<span>(</span><span>bounds, c_lambda, gpr, lambda_0=None, c_lambda_0=None, num_function_evaluations=2, xi=0.01, plotutil=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Bayesian oprimizer implementing bayesian optimization with gaussian process regressor for one dimensional input
+functions</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>bounds</code></strong> :&ensp;<code>ndarray, required</code></dt>
+<dd>bound values for optimization of lambda</dd>
+<dt><strong><code>c_lambda</code></strong> :&ensp;<code>function, required</code></dt>
+<dd>Objective function</dd>
+<dt><strong><code>gpr</code></strong> :&ensp;<code>GaussianRegressor, required</code></dt>
+<dd>gaussian process regressor</dd>
+<dt>lambda_0 (ndarray, optional): inputs evaluated by c_lambda,</dt>
+<dt>default None</dt>
+<dt><strong><code>c_lambda_0</code></strong> :&ensp;<code>ndarray</code>, optional</dt>
+<dd>observed function evaluations,default None</dd>
+<dt><strong><code>num_function_evaluations</code></strong> :&ensp;<code>long</code>, optional</dt>
+<dd>Number of times to evaluated the function c_lambda, default 2</dd>
+<dt><strong><code>xi</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Exploitation vs Exploration parameters, default 0.01</dd>
+<dt><strong><code>plotutil</code></strong> :&ensp;<code>PlotUtil</code>, optional</dt>
+<dd>plotutil object to plot the results, default None</dd>
+</dl>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>bounds</code></strong> :&ensp;<code>ndarray, required</code></dt>
+<dd>bound values for optimization of lambda</dd>
+<dt><strong><code>c_lambda</code></strong> :&ensp;<code>function, required</code></dt>
+<dd>Objective function</dd>
+<dt><strong><code>gpr</code></strong> :&ensp;<code>GaussianRegressor, required</code></dt>
+<dd>gaussian process regressor</dd>
+<dt><strong><code>lambda_0</code></strong> :&ensp;<code>ndarray</code>, optional</dt>
+<dd>inputs evaluated by c_lambda</dd>
+<dt><strong><code>c_lambda_0</code></strong> :&ensp;<code>ndarray</code>, optional</dt>
+<dd>observed function evaluations,default None</dd>
+<dt><strong><code>num_function_evaluations</code></strong> :&ensp;<code>long</code>, optional</dt>
+<dd>Number of times to evaluated the function c_lambda</dd>
+<dt><strong><code>xi</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Exploitation vs Exploration parameters</dd>
+<dt><strong><code>plotutil</code></strong> :&ensp;<code>PlotUtil</code>, optional</dt>
+<dd>plotutil object to plot the results</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BayesianOptimizer:
+    def __init__(self, bounds, c_lambda, gpr, lambda_0=None, c_lambda_0=None, num_function_evaluations=2, xi=0.01,
+                 plotutil=None):
+        &#34;&#34;&#34;
+        Bayesian oprimizer implementing bayesian optimization with gaussian process regressor for one dimensional input
+        functions
+        Args:
+            bounds (ndarray, required): bound values for optimization of lambda
+            c_lambda (function, required): Objective function
+            gpr (GaussianRegressor, required): gaussian process regressor
+             lambda_0 (ndarray, optional): inputs evaluated by c_lambda,
+                                default None
+            c_lambda_0 (ndarray, optional): observed function evaluations,default None
+            num_function_evaluations (long, optional): Number of times to evaluated the function c_lambda, default 2
+
+            xi (float, optional): Exploitation vs Exploration parameters, default 0.01
+            plotutil (PlotUtil, optional): plotutil object to plot the results, default None
+
+        Attributes:
+            bounds (ndarray, required): bound values for optimization of lambda
+            c_lambda (function, required): Objective function
+            gpr (GaussianRegressor, required): gaussian process regressor
+            lambda_0 (ndarray, optional): inputs evaluated by c_lambda
+            c_lambda_0 (ndarray, optional): observed function evaluations,default None
+            num_function_evaluations (long, optional): Number of times to evaluated the function c_lambda
+            xi (float, optional): Exploitation vs Exploration parameters
+            plotutil (PlotUtil, optional): plotutil object to plot the results
+        &#34;&#34;&#34;
+        self.lambda_0 = lambda_0
+        self.c_lambda_0 = c_lambda_0
+        self.gpr = gpr
+        self.c_lambda = c_lambda
+        self.num_function_evaluations = num_function_evaluations
+        self.bounds = bounds
+        self.xi = xi
+        self.x_star = np.arange(bounds[:, 0], bounds[:, 1], 0.01).reshape(-1, 1)
+        self.num_sample_curves = 3
+        self.plotutil = plotutil
+
+    def expected_improvement(self, x_star):
+        &#34;&#34;&#34;
+        Activation function for bayseian optimization expected improvement
+        Args:
+            x_star (ndarray, optional): input samples
+
+        Returns:
+            u_lambda (ndarray): Activation output
+
+        &#34;&#34;&#34;
+
+        mu_lambda, cov_lambda, samples = self.gpr.predict(self.lambda_0, self.num_sample_curves)
+        ci_best = np.min(mu_lambda)
+
+        mu_lambda_hat, cov_lambda_hat, samples_hat = self.gpr.predict(x_star, self.num_sample_curves)
+
+        std = np.sqrt(np.diag(cov_lambda_hat)).reshape(-1, 1)
+
+        Z = (ci_best - mu_lambda_hat - self.xi) / std
+        Z_cdf = norm.cdf(Z)
+
+        u_lambda = std * Z * Z_cdf + std * norm.pdf(Z)
+        u_lambda[std == 0.0] = 0.0
+
+        return u_lambda
+
+    def find_lambda_byEI(self):
+        &#34;&#34;&#34;
+        Find the best possible lambda give EI activation function
+        Args:
+            None
+        Returns:
+            None
+
+        &#34;&#34;&#34;
+
+        dim = self.lambda_0.shape[1]
+        min_val = 1
+        min_x = None
+
+        def min_obj(X):
+            # Minimization objective is the negative acquisition function
+            return -1 * self.expected_improvement(X.reshape(-1, dim))[0]
+
+        for x0 in np.random.uniform(self.bounds[:, 0], self.bounds[:, 1], size=(25, dim)):
+            res = minimize(min_obj, x0=x0, bounds=self.bounds, method=&#39;L-BFGS-B&#39;)
+
+            if res.fun &lt; min_val:
+                min_val = res.fun[0]
+                min_x = res.x
+                # print(min_x)
+        return min_x.reshape(-1, 1)
+
+    def optimize(self):
+        &#34;&#34;&#34;
+        Optimize the objective function
+        Args:
+            None
+        Returns:
+            lambda (ndarray): Array of found lambdas during optimization
+            c_lambda (ndarray): Array of best cost values for the objective function
+
+        &#34;&#34;&#34;
+        logging.info(&#34;generating initial values for bayesian optimization&#34;)
+        if self.lambda_0 is None or self.c_lambda_0 is None:
+            self.generate_initial_samples()
+        for i in range(self.num_function_evaluations):
+            logging.info(&#34;=&#34; * 20)
+            logging.info(&#34;Evaluation iteration: &#34; + str(i + 1))
+            self.gpr.fit(self.lambda_0, self.c_lambda_0)
+            self.gpr.optimize_l()
+            mu_lambda_1, sigma_lambda_1, samples_1 = self.gpr.predict(self.x_star, self.num_sample_curves)
+            next_lambda = self.find_lambda_byEI()
+            Y_new = self.c_lambda(next_lambda)  # train_resnet(lr=next_lambda[0][0])
+            if i % 4 == 0:
+                plt.figure()
+                plt.rc(&#39;font&#39;, size=8)
+                plt.rc(&#39;legend&#39;, fontsize=8)
+            logging.info(&#34;Lambda :&#34; + str(next_lambda) + &#34;C_lambda :&#34; + str(Y_new))
+            plt.subplot(4, 2, 2 * (i % 4) + 1)
+            self.plotutil.plot_gp(mu_lambda_1, sigma_lambda_1, self.x_star, self.lambda_0, self.c_lambda_0, samples_1,
+                                  show_legend=i == 0, savefig=False)
+            plt.title(f&#39;Iteration {i + 1}&#39;)
+
+            plt.subplot(4, 2, 2 * (i % 4) + 2)
+            self.plotutil.plot_acquisition(self.x_star, self.expected_improvement(self.x_star), next_lambda,
+                                           show_legend=i == 0, savefig=False)
+
+            if self.plotutil is not None:
+                if (i + 1) % 4 == 0 or (i + 1) == self.num_function_evaluations:
+                    self.plotutil.pp.savefig()
+
+            self.lambda_0 = np.append(self.lambda_0, next_lambda)[np.newaxis][:].reshape(-1, 1)
+            self.c_lambda_0 = np.append(self.c_lambda_0, Y_new)[np.newaxis][:].reshape(-1, 1)
+
+        self.plotutil.plot_convergence(self.lambda_0, self.c_lambda_0, show_legend=True, savefig=False)
+        if self.plotutil is not None:
+            self.plotutil.pp.savefig()
+        logging.info(&#34;Optimization complete&#34;)
+        return self.lambda_0, self.c_lambda_0
+
+    def generate_initial_samples(self):
+        &#34;&#34;&#34;
+        Genereate the initial observation for starting bayesian optimization
+        Args:
+            None
+        Returns:
+            None
+        &#34;&#34;&#34;
+
+        lambda_0 = np.random.uniform(self.bounds[:, 0], self.bounds[:, 1])
+        lambda_0 = np.array([lambda_0]).reshape(-1, 1)
+        final_loss = self.c_lambda(lambda_0)
+        self.lambda_0 = lambda_0
+        self.c_lambda_0 = np.array([final_loss]).reshape(-1, 1)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="optimizers.BayesianOptimizer.expected_improvement"><code class="name flex">
+<span>def <span class="ident">expected_improvement</span></span>(<span>self, x_star)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Activation function for bayseian optimization expected improvement</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x_star</code></strong> :&ensp;<code>ndarray</code>, optional</dt>
+<dd>input samples</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>u_lambda (ndarray): Activation output</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def expected_improvement(self, x_star):
+    &#34;&#34;&#34;
+    Activation function for bayseian optimization expected improvement
+    Args:
+        x_star (ndarray, optional): input samples
+
+    Returns:
+        u_lambda (ndarray): Activation output
+
+    &#34;&#34;&#34;
+
+    mu_lambda, cov_lambda, samples = self.gpr.predict(self.lambda_0, self.num_sample_curves)
+    ci_best = np.min(mu_lambda)
+
+    mu_lambda_hat, cov_lambda_hat, samples_hat = self.gpr.predict(x_star, self.num_sample_curves)
+
+    std = np.sqrt(np.diag(cov_lambda_hat)).reshape(-1, 1)
+
+    Z = (ci_best - mu_lambda_hat - self.xi) / std
+    Z_cdf = norm.cdf(Z)
+
+    u_lambda = std * Z * Z_cdf + std * norm.pdf(Z)
+    u_lambda[std == 0.0] = 0.0
+
+    return u_lambda</code></pre>
+</details>
+</dd>
+<dt id="optimizers.BayesianOptimizer.find_lambda_byEI"><code class="name flex">
+<span>def <span class="ident">find_lambda_byEI</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Find the best possible lambda give EI activation function</p>
+<h2 id="args">Args</h2>
+<p>None</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_lambda_byEI(self):
+    &#34;&#34;&#34;
+    Find the best possible lambda give EI activation function
+    Args:
+        None
+    Returns:
+        None
+
+    &#34;&#34;&#34;
+
+    dim = self.lambda_0.shape[1]
+    min_val = 1
+    min_x = None
+
+    def min_obj(X):
+        # Minimization objective is the negative acquisition function
+        return -1 * self.expected_improvement(X.reshape(-1, dim))[0]
+
+    for x0 in np.random.uniform(self.bounds[:, 0], self.bounds[:, 1], size=(25, dim)):
+        res = minimize(min_obj, x0=x0, bounds=self.bounds, method=&#39;L-BFGS-B&#39;)
+
+        if res.fun &lt; min_val:
+            min_val = res.fun[0]
+            min_x = res.x
+            # print(min_x)
+    return min_x.reshape(-1, 1)</code></pre>
+</details>
+</dd>
+<dt id="optimizers.BayesianOptimizer.generate_initial_samples"><code class="name flex">
+<span>def <span class="ident">generate_initial_samples</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Genereate the initial observation for starting bayesian optimization</p>
+<h2 id="args">Args</h2>
+<p>None</p>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_initial_samples(self):
+    &#34;&#34;&#34;
+    Genereate the initial observation for starting bayesian optimization
+    Args:
+        None
+    Returns:
+        None
+    &#34;&#34;&#34;
+
+    lambda_0 = np.random.uniform(self.bounds[:, 0], self.bounds[:, 1])
+    lambda_0 = np.array([lambda_0]).reshape(-1, 1)
+    final_loss = self.c_lambda(lambda_0)
+    self.lambda_0 = lambda_0
+    self.c_lambda_0 = np.array([final_loss]).reshape(-1, 1)</code></pre>
+</details>
+</dd>
+<dt id="optimizers.BayesianOptimizer.optimize"><code class="name flex">
+<span>def <span class="ident">optimize</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Optimize the objective function</p>
+<h2 id="args">Args</h2>
+<p>None</p>
+<h2 id="returns">Returns</h2>
+<p>lambda (ndarray): Array of found lambdas during optimization
+c_lambda (ndarray): Array of best cost values for the objective function</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def optimize(self):
+    &#34;&#34;&#34;
+    Optimize the objective function
+    Args:
+        None
+    Returns:
+        lambda (ndarray): Array of found lambdas during optimization
+        c_lambda (ndarray): Array of best cost values for the objective function
+
+    &#34;&#34;&#34;
+    logging.info(&#34;generating initial values for bayesian optimization&#34;)
+    if self.lambda_0 is None or self.c_lambda_0 is None:
+        self.generate_initial_samples()
+    for i in range(self.num_function_evaluations):
+        logging.info(&#34;=&#34; * 20)
+        logging.info(&#34;Evaluation iteration: &#34; + str(i + 1))
+        self.gpr.fit(self.lambda_0, self.c_lambda_0)
+        self.gpr.optimize_l()
+        mu_lambda_1, sigma_lambda_1, samples_1 = self.gpr.predict(self.x_star, self.num_sample_curves)
+        next_lambda = self.find_lambda_byEI()
+        Y_new = self.c_lambda(next_lambda)  # train_resnet(lr=next_lambda[0][0])
+        if i % 4 == 0:
+            plt.figure()
+            plt.rc(&#39;font&#39;, size=8)
+            plt.rc(&#39;legend&#39;, fontsize=8)
+        logging.info(&#34;Lambda :&#34; + str(next_lambda) + &#34;C_lambda :&#34; + str(Y_new))
+        plt.subplot(4, 2, 2 * (i % 4) + 1)
+        self.plotutil.plot_gp(mu_lambda_1, sigma_lambda_1, self.x_star, self.lambda_0, self.c_lambda_0, samples_1,
+                              show_legend=i == 0, savefig=False)
+        plt.title(f&#39;Iteration {i + 1}&#39;)
+
+        plt.subplot(4, 2, 2 * (i % 4) + 2)
+        self.plotutil.plot_acquisition(self.x_star, self.expected_improvement(self.x_star), next_lambda,
+                                       show_legend=i == 0, savefig=False)
+
+        if self.plotutil is not None:
+            if (i + 1) % 4 == 0 or (i + 1) == self.num_function_evaluations:
+                self.plotutil.pp.savefig()
+
+        self.lambda_0 = np.append(self.lambda_0, next_lambda)[np.newaxis][:].reshape(-1, 1)
+        self.c_lambda_0 = np.append(self.c_lambda_0, Y_new)[np.newaxis][:].reshape(-1, 1)
+
+    self.plotutil.plot_convergence(self.lambda_0, self.c_lambda_0, show_legend=True, savefig=False)
+    if self.plotutil is not None:
+        self.plotutil.pp.savefig()
+    logging.info(&#34;Optimization complete&#34;)
+    return self.lambda_0, self.c_lambda_0</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="optimizers.BayesianOptimizer" href="#optimizers.BayesianOptimizer">BayesianOptimizer</a></code></h4>
+<ul class="">
+<li><code><a title="optimizers.BayesianOptimizer.expected_improvement" href="#optimizers.BayesianOptimizer.expected_improvement">expected_improvement</a></code></li>
+<li><code><a title="optimizers.BayesianOptimizer.find_lambda_byEI" href="#optimizers.BayesianOptimizer.find_lambda_byEI">find_lambda_byEI</a></code></li>
+<li><code><a title="optimizers.BayesianOptimizer.generate_initial_samples" href="#optimizers.BayesianOptimizer.generate_initial_samples">generate_initial_samples</a></code></li>
+<li><code><a title="optimizers.BayesianOptimizer.optimize" href="#optimizers.BayesianOptimizer.optimize">optimize</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

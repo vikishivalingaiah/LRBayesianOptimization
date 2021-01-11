@@ -1,0 +1,112 @@
+INFO:root:************************************************************
+INFO:root:Bayeisan optimization
+INFO:root:************************************************************
+INFO:root:Running bo for xi=0.1
+INFO:root:Results stored in :results/bo_result_0.pdf
+INFO:root:generating initial values for bayesian optimization
+INFO:root:Epoch 1/1, training loss: 0.23221294844479612                     , validation loss: 0.24697236716747284
+INFO:root:	     precision: 0.9309
+INFO:root:	        recall: 0.9274
+INFO:root:	            F1: 0.9175
+INFO:root:	      accuracy: 0.9315
+INFO:root:Training time: 507.1585319042206s
+INFO:root:====================
+INFO:root:Evaluation iteration: 1
+INFO:root:Epoch 1/1, training loss: 0.45085093415627875                     , validation loss: 0.2963859736919403
+INFO:root:	     precision: 0.9067
+INFO:root:	        recall: 0.9022
+INFO:root:	            F1: 0.8905
+INFO:root:	      accuracy: 0.9123
+INFO:root:Training time: 500.87601828575134s
+INFO:root:Lambda :[[1.]]C_lambda :0.45085093415627875
+INFO:root:====================
+INFO:root:Evaluation iteration: 2
+INFO:root:Epoch 1/1, training loss: 2.468942537943522                     , validation loss: 2.455303192138672
+INFO:root:	     precision: 0.0630
+INFO:root:	        recall: 0.0960
+INFO:root:	            F1: 0.0568
+INFO:root:	      accuracy: 0.0955
+INFO:root:Training time: 535.4558260440826s
+INFO:root:Lambda :[[0.]]C_lambda :2.468942537943522
+INFO:root:====================
+INFO:root:Evaluation iteration: 3
+INFO:root:Epoch 1/1, training loss: 0.29316263550352306                     , validation loss: 0.22946485877037048
+INFO:root:	     precision: 0.9249
+INFO:root:	        recall: 0.9270
+INFO:root:	            F1: 0.9154
+INFO:root:	      accuracy: 0.9328
+INFO:root:Training time: 607.5468757152557s
+INFO:root:Lambda :[[0.36700486]]C_lambda :0.29316263550352306
+INFO:root:====================
+INFO:root:Evaluation iteration: 4
+INFO:root:Epoch 1/1, training loss: 0.3970510113755241                     , validation loss: 0.3088681697845459
+INFO:root:	     precision: 0.9043
+INFO:root:	        recall: 0.9008
+INFO:root:	            F1: 0.8865
+INFO:root:	      accuracy: 0.9068
+INFO:root:Training time: 522.9895875453949s
+INFO:root:Lambda :[[0.67877512]]C_lambda :0.3970510113755241
+INFO:root:====================
+INFO:root:Evaluation iteration: 5
+INFO:root:Epoch 1/1, training loss: 0.32119136947294075                     , validation loss: 0.25315025448799133
+INFO:root:	     precision: 0.9166
+INFO:root:	        recall: 0.9141
+INFO:root:	            F1: 0.9037
+INFO:root:	      accuracy: 0.9230
+INFO:root:Training time: 502.8873522281647s
+INFO:root:Lambda :[[0.51837794]]C_lambda :0.32119136947294075
+INFO:root:====================
+INFO:root:Evaluation iteration: 6
+INFO:root:Epoch 1/1, training loss: 0.5035610946729779                     , validation loss: 0.27813559770584106
+INFO:root:	     precision: 0.9120
+INFO:root:	        recall: 0.9118
+INFO:root:	            F1: 0.8995
+INFO:root:	      accuracy: 0.9206
+INFO:root:Training time: 529.215113401413s
+INFO:root:Lambda :[[0.83686927]]C_lambda :0.5035610946729779
+INFO:root:====================
+INFO:root:Evaluation iteration: 7
+INFO:root:Epoch 1/1, training loss: 0.23345225052367896                     , validation loss: 0.2230483889579773
+INFO:root:	     precision: 0.9298
+INFO:root:	        recall: 0.9300
+INFO:root:	            F1: 0.9200
+INFO:root:	      accuracy: 0.9362
+INFO:root:Training time: 562.1675488948822s
+INFO:root:Lambda :[[0.24672933]]C_lambda :0.23345225052367896
+INFO:root:====================
+INFO:root:Evaluation iteration: 8
+INFO:root:Epoch 1/1, training loss: 0.3017842914353125                     , validation loss: 0.27515000104904175
+INFO:root:	     precision: 0.9119
+INFO:root:	        recall: 0.9129
+INFO:root:	            F1: 0.9007
+INFO:root:	      accuracy: 0.9221
+INFO:root:Training time: 574.0924806594849s
+INFO:root:Lambda :[[0.44309189]]C_lambda :0.3017842914353125
+INFO:root:====================
+INFO:root:Evaluation iteration: 9
+INFO:root:Epoch 1/1, training loss: 0.23519875061990073                     , validation loss: 0.20597225427627563
+INFO:root:	     precision: 0.9333
+INFO:root:	        recall: 0.9357
+INFO:root:	            F1: 0.9247
+INFO:root:	      accuracy: 0.9396
+INFO:root:Training time: 585.7182989120483s
+INFO:root:Lambda :[[0.2031311]]C_lambda :0.23519875061990073
+INFO:root:====================
+INFO:root:Evaluation iteration: 10
+INFO:root:Epoch 1/1, training loss: 0.3833495788931226                     , validation loss: 0.2985621690750122
+INFO:root:	     precision: 0.9016
+INFO:root:	        recall: 0.8983
+INFO:root:	            F1: 0.8861
+INFO:root:	      accuracy: 0.9104
+INFO:root:Training time: 546.6027510166168s
+INFO:root:Lambda :[[0.75505455]]C_lambda :0.3833495788931226
+INFO:root:Optimization complete
+INFO:root:================================================
+INFO:root:Best learning rate
+INFO:root:[0.17161013]
+INFO:root:Lowest Loss
+INFO:root:0.23221294844479612
+INFO:root:================================================
+INFO:root:********************
+INFO:root:Bayesian optimization complete
+INFO:root:********************
